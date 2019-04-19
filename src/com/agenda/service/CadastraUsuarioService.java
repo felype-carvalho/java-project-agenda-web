@@ -1,7 +1,10 @@
 package com.agenda.service;
 
+import java.util.List;
+
 import com.agenda.dao.PessoaDAO;
 import com.agenda.model.Pessoa;
+import com.sun.org.apache.bcel.internal.generic.DALOAD;
 
 public class CadastraUsuarioService {
 
@@ -11,6 +14,16 @@ public class CadastraUsuarioService {
 		
 		canal.cadastro(pessoa);
 		
+		System.out.println(buscaPessoas());
+		
 	}
 	
+	public List<Pessoa> buscaPessoas(){
+		
+		PessoaDAO dao = new PessoaDAO();
+		
+		dao.buscaPessoas();
+		
+		return dao.buscaPessoas();
+	}
 }
