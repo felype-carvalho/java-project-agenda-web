@@ -14,7 +14,7 @@ public class CadastraUsuarioService {
 		
 		canal.cadastro(pessoa);
 		
-		System.out.println(buscaPessoas());
+		
 		
 	}
 	

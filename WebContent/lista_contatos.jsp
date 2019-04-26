@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,34 +28,28 @@
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="adiciona-contato.html">Cadastro</a>
 				</li>
-				<li class="nav-item active"><a class="nav-link" href="lista_contatos.html">Lista de Cadastro</a></li>
+				<li class="nav-item active"><a class="nav-link" href="busca-contatos">Lista de Cadastro</a></li>
 			</ul>
 		</div>
 	</nav>
 	
 <div class="container">
 	<table class="table">
-		<tr>
-			<th>Nome</th>
-			<th>E-mail</th>
-			<th>Endereço</th>
-			<th>Telefone</th>
-		</tr>
-		<tr>
-			<td>Enoque Leal</td>
-			<td>enoque@etec.com</td>
-			<td>Avenida Interlagos, 1000</td>
-			<td>(11) 5900-0000</td>
-		</tr>
-		<tr>
-			<td>Felype Carvalho</td>
-			<td>felype@etec.com</td>
-			<td>Avenida Mangaágua</td>
-			<td>(11) 4002-8922</td>
-		</tr>
-	
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Endereço</th>
+				<th>Telefone</th>
+			</tr>
+		<c:forEach var="pessoa" items="${contatos}">
+			<tr>
+				<td>${pessoa.nome}</td>
+				<td>${pessoa.email}</td>
+				<td>${pessoa.endereco}</td>
+				<td>${pessoa.telefone}</td>
+			</tr>		
+		</c:forEach>	
 	</table>
-
 </div>
 
 </body>
