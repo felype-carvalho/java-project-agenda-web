@@ -28,7 +28,7 @@ public class ListaUsuariosServlet extends HttpServlet {
 			
 			List<Pessoa> pessoas = service.buscaPessoas();
 			
-			request.setAttribute("contatos", contatos);
+			request.setAttribute("pessoas", pessoas);
 			
 			request.getRequestDispatcher("lista_contatos.jsp").forward(request, response);
 			
