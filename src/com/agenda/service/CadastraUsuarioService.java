@@ -26,4 +26,9 @@ public class CadastraUsuarioService {
 		
 		return dao.buscaPessoas();
 	}
+
+	public void removeContato(Object object) {
+		
+		
+	}
 }

@@ -47,6 +47,8 @@
 				<td>${pessoa.email}</td>
 				<td>${pessoa.endereco}</td>
 				<td>${pessoa.telefone}</td>
+				<td><a type="button" class="btn btn-danger" href="remover-contatos">Remover</a></td>
+				
 			</tr>		
 		</c:forEach>	
 	</table>
