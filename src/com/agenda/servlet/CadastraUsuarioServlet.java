@@ -13,19 +13,17 @@ import com.agenda.service.CadastraUsuarioService;
 public class CadastraUsuarioServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+		
+		throws ServletException, IOException {
 		
 		Pessoa pessoa = new Pessoa();
 		pessoa.setNome(request.getParameter("nome"));
 		pessoa.setEndereco(request.getParameter("endereco"));
 		pessoa.setTelefone(request.getParameter("telefone"));
 		pessoa.setEmail(request.getParameter("email"));
-		
-		
-		CadastraUsuarioService service = new CadastraUsuarioService();
-		
-		service.cadastra(pessoa);
-		
+				
+		CadastraUsuarioService service = new CadastraUsuarioService();		
+		service.cadastra(pessoa);		
 		response.sendRedirect("busca-contatos");
 	}
 
