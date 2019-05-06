@@ -8,27 +8,15 @@ import com.sun.org.apache.bcel.internal.generic.DALOAD;
 
 public class CadastraUsuarioService {
 
-	public void cadastra(Pessoa pessoa) {
-		
-		PessoaDAO canal = new PessoaDAO();
-		
-		canal.cadastro(pessoa);
-		
-		
-		
-	}
-	
-	public List<Pessoa> buscaPessoas(){
-		
-		PessoaDAO dao = new PessoaDAO();
-		
-		dao.buscaPessoas();
-		
+	public void cadastra(Pessoa pessoa) {		
+		PessoaDAO canal = new PessoaDAO();		
+		canal.cadastro(pessoa);				
+	}	
+	public List<Pessoa> buscaPessoas(){		
+		PessoaDAO dao = new PessoaDAO();		
+		dao.buscaPessoas();		
 		return dao.buscaPessoas();
 	}
-
-	public void removeContato(Object object) {
-		
-		
+	public void removeContato(Object object) {				
 	}
 }
