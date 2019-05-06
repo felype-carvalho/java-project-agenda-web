@@ -15,12 +15,9 @@ public class RemoveContatoServlet extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		
 		CadastraUsuarioService service = new CadastraUsuarioService();
 		
-		service.removeContato(null);
-		
-		
+		service.removeContato(null);		
 	}
 }
