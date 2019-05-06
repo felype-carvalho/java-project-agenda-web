@@ -24,7 +24,7 @@ public class ListaUsuariosServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException{
 		
-			service= new CadastraUsuarioService();
+			service = new CadastraUsuarioService();
 			
 			List<Pessoa> pessoas = service.buscaPessoas();
 			
