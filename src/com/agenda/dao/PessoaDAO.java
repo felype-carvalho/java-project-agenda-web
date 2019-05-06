@@ -19,15 +19,13 @@ public class PessoaDAO {
 		String SQL = "insert into pessoas (nome, email, endereco, telefone) values (?,?,?,?)";
 
 		try {
-
 			this.connection = ConnectionFactory.getConnection();
 			PreparedStatement stmt = this.connection.prepareStatement(SQL);
 
 			stmt.setString(1, pessoa.getNome());
 			stmt.setString(2, pessoa.getEmail());
 			stmt.setString(3, pessoa.getEndereco());
-			stmt.setString(4, pessoa.getTelefone());
-			
+			stmt.setString(4, pessoa.getTelefone());			
 
 			stmt.execute();
 			stmt.close();
@@ -35,17 +33,15 @@ public class PessoaDAO {
 			buscaPessoas();
 
 		} catch (SQLException e) {
-			throw new RuntimeException(e);
+		  throw new RuntimeException(e);
 		}
-
 	}
 	
 	public List<Pessoa> buscaPessoas(){
 		
 		String SQL = "select * from pessoas";
 		
-		try {
-			
+		try {			
 			this.connection = new ConnectionFactory().getConnection();
 			PreparedStatement stmt = this.connection.prepareStatement(SQL);
 			
@@ -60,9 +56,7 @@ public class PessoaDAO {
 				pessoa.setEmail(rs.getString("email"));
 				pessoa.setEndereco(rs.getString("endereco"));
 				pessoa.setTelefone(rs.getString("telefone"));
-				pessoas.add(pessoa);
-				
-				
+				pessoas.add(pessoa);								
 			}
 			
 			stmt.close();
@@ -72,7 +66,6 @@ public class PessoaDAO {
 		
 		} catch (SQLException e) {
 			 throw new RuntimeException();
-		}
-	
+		}	
 	}
 }
