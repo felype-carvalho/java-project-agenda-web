@@ -36,6 +36,7 @@
 <div class="container">
 	<table class="table">
 			<tr>
+				<th>Identificador</th>
 				<th>Nome</th>
 				<th>Email</th>
 				<th>Endereço</th>
@@ -43,11 +44,12 @@
 			</tr>
 		<c:forEach var="pessoa" items="${contatos}">
 			<tr>
+				<td>${pessoa.id}</td>
 				<td>${pessoa.nome}</td>
 				<td>${pessoa.email}</td>
 				<td>${pessoa.endereco}</td>
 				<td>${pessoa.telefone}</td>
-				<td><a type="button" class="btn btn-danger" href="remover-contatos">Remover</a></td>
+				<td><a type="button" class="btn btn-danger" href="remover-contatos?id=${pessoa.id}">Remover</a></td>
 				
 			</tr>		
 		</c:forEach>	
