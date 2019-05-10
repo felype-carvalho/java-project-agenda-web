@@ -26,7 +26,7 @@
 				<li class="nav-item"><a class="nav-link" href="index.html">Inicio
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="adiciona-contato.html">Cadastro</a>
+				<li class="nav-item"><a class="nav-link" href="adiciona-contato.jsp">Cadastro</a>
 				</li>
 				<li class="nav-item active"><a class="nav-link" href="busca-contatos">Lista de Cadastro</a></li>
 			</ul>

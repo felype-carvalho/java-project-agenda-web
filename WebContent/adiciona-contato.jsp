@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,7 @@
 					href="index.html">Inicio <span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item active"><a class="nav-link"
-					href="adiciona-contato.html">Cadastro</a></li>
+					href="adiciona-contato.jsp">Cadastro</a></li>
 				<li class="nav-item"><a class="nav-link"
 					href="busca-contatos">Lista de Cadastro</a></li>
 			</ul>
@@ -36,7 +37,7 @@
 				class="form-control">
 		</div>
 		<div class="col-sm-6">
-			<label>EndereÃ§o</label> <input name="endereco" type="text"
+			<label>Endereço</label> <input name="endereco" type="text"
 				class="form-control">
 		</div>
 		<div class="col-sm-6">

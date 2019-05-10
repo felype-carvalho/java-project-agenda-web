@@ -14,17 +14,17 @@ import com.agenda.service.CadastraUsuarioService;
 
 @WebServlet("/busca-contatos")
 public class ListaUsuariosServlet extends HttpServlet {
-	
-	private static final long serialVersionUID = 1L;	
+
+	private static final long serialVersionUID = 1L;
 	private CadastraUsuarioService service;
-	
+
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException{		
-			service = new CadastraUsuarioService();			
-			List<Pessoa> pessoas = service.buscaPessoas();			
-			request.setAttribute("contatos", pessoas);			
-			request.getRequestDispatcher("lista_contatos.jsp").forward(request, response);			
-		}					
-	}
 
+		throws ServletException, IOException {
+		service = new CadastraUsuarioService();
+		List<Pessoa> pessoas = service.buscaPessoas();
+		request.setAttribute("contatos", pessoas);
+		request.getRequestDispatcher("lista_contatos.jsp").forward(request, response);
+	}
+}
