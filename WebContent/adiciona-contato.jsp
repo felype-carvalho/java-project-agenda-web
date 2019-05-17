@@ -33,19 +33,19 @@
 
 	<form action="cadastra-usuario">
 		<div class="col-sm-6">
-			<label>Nome</label> <input name="nome" type="text"
+			<label>Nome</label> <input value="${param.nome}" name="nome" type="text"
 				class="form-control">
 		</div>
 		<div class="col-sm-6">
-			<label>Endereço</label> <input name="endereco" type="text"
+			<label>Endereço</label> <input value="${param.endereco}" name="endereco" type="text"
 				class="form-control">
 		</div>
 		<div class="col-sm-6">
-			<label>Telefone</label> <input name="telefone" type="text"
+			<label>Telefone</label> <input value="${param.telefone}" name="telefone" type="text"
 				class="form-control" data-mask="(99)9999-9999">
 		</div>
 		<div class="col-sm-6">
-			<label>Email</label> <input name="email" type="Email"
+			<label>Email</label> <input value="${param.email}" name="email" type="Email"
 				class="form-control">
 		</div>
 

@@ -17,13 +17,25 @@ public class CadastraUsuarioServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		Pessoa pessoa = new Pessoa();
+		
 		pessoa.setNome(request.getParameter("nome"));
 		pessoa.setEndereco(request.getParameter("endereco"));
 		pessoa.setTelefone(request.getParameter("telefone"));
 		pessoa.setEmail(request.getParameter("email"));
-
+		
 		CadastraUsuarioService service = new CadastraUsuarioService();
-		service.cadastra(pessoa);
+				
+			if (null != request.getParameter("id") &&
+					!request.getParameter("id").equals("")) {
+				service.alterar(pessoa);
+				pessoa.setId(Long.parseLong(request.getParameter("id")));
+			} else {
+				service.cadastra(pessoa);
+			}
+	
+
+		CadastraUsuarioService service1 = new CadastraUsuarioService();
+		service1.cadastra(pessoa);
 		response.sendRedirect("busca-contatos");
 	}
 

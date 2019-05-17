@@ -49,7 +49,9 @@
 				<td>${pessoa.email}</td>
 				<td>${pessoa.endereco}</td>
 				<td>${pessoa.telefone}</td>
-				<td><a type="button" class="btn btn-danger" href="remover-contatos?id=${pessoa.id}">Remover</a></td>
+				<td><a type="button" class="btn btn-warning" href="adiciona-contato.jsp?id=${pessoa.id}&nome=${pessoa.nome}&email=${pessoa.email}&endereco=${pessoa.endereco}&telefone=${pessoa.telefone}">Alterar</a>
+				<span> | </span>
+				<a type="button" class="btn btn-danger" href="remover-contatos?id=${pessoa.id}">Remover</a></td>
 				
 			</tr>		
 		</c:forEach>	

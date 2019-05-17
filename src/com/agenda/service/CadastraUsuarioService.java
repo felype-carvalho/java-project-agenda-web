@@ -11,7 +11,7 @@ public class CadastraUsuarioService {
 	public void cadastra(Pessoa pessoa) {		
 		PessoaDAO canal = new PessoaDAO();		
 		canal.cadastro(pessoa);				
-	}	
+	}
 	public List<Pessoa> buscaPessoas(){		
 		PessoaDAO dao = new PessoaDAO();		
 		dao.buscaPessoas();		
@@ -20,5 +20,9 @@ public class CadastraUsuarioService {
 	public void removeContato(Pessoa pessoa) {
 		PessoaDAO dao = new PessoaDAO();
 		dao.remove(pessoa);
+	}
+	public void alterar(Pessoa pessoa) {
+		PessoaDAO dao = new PessoaDAO();
+		dao.alterar(pessoa);
 	}
 }
