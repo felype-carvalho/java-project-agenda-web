@@ -18,6 +18,14 @@ public class ListaUsuariosServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CadastraUsuarioService service;
 
+
+	public String execute(HttpServletRequest  request, HttpServletResponse response) throws Exception{
+		this.service = new CadastraUsuarioService();
+		List <Pessoa> contatos = this.service.buscaPessoas();
+		request.setAttribute("contatos", contatos);
+		return "tabela-contato.jsp";
+	}
+	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 

@@ -88,7 +88,7 @@ public class PessoaDAO {
 	
 	public void alterar(Pessoa pessoa) {
 		
-		String SQL = "update pessoas set"
+		String SQL = "update pessoas set "
 				+ "nome=?,"
 				+ "email=?,"
 				+ "telefone=?,"

@@ -20,36 +20,37 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"><a class="nav-link"
-					href="index.html">Inicio <span class="sr-only">(current)</span>
+				<li class="nav-item"><a class="nav-link" href="index.html">Inicio
+						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item active"><a class="nav-link"
 					href="adiciona-contato.jsp">Cadastro</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="busca-contatos">Lista de Cadastro</a></li>
+				<li class="nav-item"><a class="nav-link" href="busca-contatos">Lista
+						de Cadastro</a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<form action="cadastra-usuario">
 		<div class="col-sm-6">
-			<label>Nome</label> <input value="${param.nome}" name="nome" type="text"
-				class="form-control">
+			<label>Nome</label> <input value="${param.nome}" name="nome"
+				type="text" class="form-control">
 		</div>
 		<div class="col-sm-6">
-			<label>Endereço</label> <input value="${param.endereco}" name="endereco" type="text"
-				class="form-control">
+			<label>Endereço</label> <input value="${param.endereco}"
+				name="endereco" type="text" class="form-control">
 		</div>
 		<div class="col-sm-6">
-			<label>Telefone</label> <input value="${param.telefone}" name="telefone" type="text"
-				class="form-control" data-mask="(99)9999-9999">
+			<label>Telefone</label> <input value="${param.telefone}"
+				name="telefone" type="text" class="form-control"
+				data-mask="(99)9999-9999">
 		</div>
 		<div class="col-sm-6">
-			<label>Email</label> <input value="${param.email}" name="email" type="Email"
-				class="form-control">
+			<label>Email</label> <input value="${param.email}" name="email"
+				type="Email" class="form-control">
 		</div>
 
-		<br>
+		<input type="hidden" name="id" value="${param.id}"> <br>
 		<div class="col-sm-6">
 			<button type="submit" class="btn btn-primary">Entrar</button>
 		</div>
