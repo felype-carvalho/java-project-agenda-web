@@ -25,8 +25,12 @@ public class CadastraUsuarioServlet extends HttpServlet {
 
 		CadastraUsuarioService service = new CadastraUsuarioService();
 
-		pessoa.setId(Integer.parseInt(request.getParameter("id")));
-
+		if (null != request.getParameter("id") && request.getParameter("id").equals("")) {
+			pessoa.setId(Integer.parseInt(request.getParameter("id")));
+			
+		}
+		
+		service.cadastrarOuAlterar(pessoa);
 		CadastraUsuarioService service1 = new CadastraUsuarioService();
 		service1.cadastra(pessoa);
 		response.sendRedirect("busca-contatos");

@@ -24,9 +24,9 @@ public class CadastraUsuarioService {
 	}
 	public void cadastrarOuAlterar(Pessoa pessoa) {
 		if (0 != pessoa.getId()) {
-			this.alterar(pessoa);
+			this.dao.alterar(pessoa);
 		} else {
-			this.cadastra(pessoa);
+			this.dao.cadastro(pessoa);
 		}
 	}
 }
