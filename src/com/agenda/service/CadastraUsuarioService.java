@@ -22,4 +22,11 @@ public class CadastraUsuarioService {
 	public void alterar(Pessoa pessoa) {
 		this.dao.alterar(pessoa);
 	}
+	public void cadastrarOuAlterar(Pessoa pessoa) {
+		if (0 != pessoa.getId()) {
+			this.alterar(pessoa);
+		} else {
+			this.cadastra(pessoa);
+		}
+	}
 }

@@ -25,12 +25,7 @@ public class CadastraUsuarioServlet extends HttpServlet {
 
 		CadastraUsuarioService service = new CadastraUsuarioService();
 
-		if (null != request.getParameter("id") && !request.getParameter("id").equals("")) {
-			pessoa.setId(Integer.parseInt(request.getParameter("id")));
-			service.alterar(pessoa);
-		} else {
-			service.cadastra(pessoa);
-		}
+		pessoa.setId(Integer.parseInt(request.getParameter("id")));
 
 		CadastraUsuarioService service1 = new CadastraUsuarioService();
 		service1.cadastra(pessoa);
