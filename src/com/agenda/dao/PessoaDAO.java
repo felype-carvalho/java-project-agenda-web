@@ -91,8 +91,8 @@ public class PessoaDAO {
 		String SQL = "update pessoas set "
 				+ "nome=?,"
 				+ "email=?,"
-				+ "telefone=?,"
-				+ "enderco=?"
+				+ "endereco=?,"
+				+ "telefone=?"
 				+ "where id=?";
 		
 		try {
